@@ -1,0 +1,17 @@
+import random
+low = 1
+high = 10
+num = random.randint(low,high)
+for i in range(0,3):
+    user = int(input("please enter a number between 1 and 10: \n"))
+    if user > high or user < low:
+        print("your answer is out of bounds")
+    elif user == num:
+        print(f"correct! the number was {num}")
+        break
+    elif user > num:
+        print(f"no, you have {2-i} guesses left, the answer is smaller")
+    else:
+        print(f"no, you have {2-i} guesses left, the answer is bigger")
+if user!=num:
+    print(f"incorrect, the correct answer was {num}")
